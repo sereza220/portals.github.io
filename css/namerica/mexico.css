@@ -1,0 +1,1060 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #3cb371;
+  color: white;
+  font-family: 'Play', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+  text-align: justify;
+}
+
+.header {
+  background: #2E9AFE;
+  height: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-logo a {
+  display: inline-block;
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.header-logo a:hover {
+  color: #E3A51B;
+}
+
+.menu-link {
+  display: block;
+  position: fixed;
+  z-index: 9;
+  padding: 18px;
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.menu-link span:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: '';
+  margin-top: -9px;
+  margin-left: -15px;
+}
+
+.menu-link span:after {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: '';
+  margin-top: 6px;
+  margin-left: -15px;
+}
+
+.menu-link_active span {
+  background-color: transparent;
+}
+
+.menu-link_active span:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-top: 0;
+}
+
+.menu-link_active span:after {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  margin-top: 0;
+}
+
+.over-menu {
+  position: fixed;
+  background-color: #2E9AFE;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: -100vw;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.over-menu_active {
+  left: 0;
+}
+
+.over-menu li {
+  width: 100vw;
+}
+
+.over-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.over-menu ul a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  line-height: 4;
+  font-weight: 100;
+  letter-spacing: 4px;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.over-menu ul a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2E9AFE;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 99.2vw;
+  position: absolute;
+  z-index: 0;
+}
+
+.item {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #aeaeaeae;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.item span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.item-1 {
+  background: url("http://wikiwarriors.org/images/a/a6/Full_59NygWgwqkQ.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-2 {
+  background: url("http://wikiwarriors.org/images/6/61/Символическое_изображение_начального_этапа_военной_истории_Мексики.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-3 {
+  background: url("http://wikiwarriors.org/images/9/93/Viva_mexico_by_genzoman-d4a02kx.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-4 {
+  background: url("http://haber.sol.org.tr/sites/default/files/cartel-998x665.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.on-slider {
+	height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.main-screen {
+	background: rgba(60,179,113, 0.9);
+	position: relative;
+	z-index: 1;
+	padding: 30px;
+}
+.main-shield {
+	text-align: end;
+}
+
+.main-shield__img {
+	transition: all 0.5s;
+}
+
+.main-shield__img_hover {
+ transform: rotateZ(360deg);
+}
+
+.main-text {
+	margin-left: 50px;
+}
+
+.main-text h1 {
+	font-size: 6em;
+	font-weight: 700;
+	color: #ffa100;
+	text-shadow: 6px 4px black;
+	transition: all 0.2s;
+}
+
+.main-text h1::before {
+	content: 'портал:';
+	font-size: 0.3em;
+	font-weight: 400;
+	color: #fff;
+	text-shadow: 2px 2px black;
+	display: block;
+}
+
+.main-text h1:hover {
+	font-size: 110px;
+	font-weight: 700;
+	color: #ce1126;
+	text-shadow: 6px 4px black;
+}
+
+.bread-crumbs {
+	margin-bottom: 30px;
+	text-shadow: 0px 1px black;
+}
+
+.bread-crumbs a {
+	color: #fff;
+	font-size: 15px;
+	transition: all 0.2s;
+}
+
+.bread-crumbs a:hover {
+	text-shadow: 3px 3px 10px red, -3px -3px 10px blue;
+}
+
+.main-text p {
+	margin-bottom: 20px;
+	text-shadow: 1px 2px black;
+	font-size: 1.4em;
+  text-align: left;
+}
+
+.main-references {
+	font-size: 1.5em;
+	text-shadow: 1px 2px black;
+  text-align: left;
+}
+
+.main-references a {
+	color: #ffa100;
+	font-size:  1.3em;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.main-references a:hover {
+	color: #ce1126;
+ text-transform: uppercase;
+}
+
+.content-screen {
+	background: rgba(60,179,113, 0.9);
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding: 30px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.content-screen h2 {
+	text-shadow: 1px 2px black;
+	font-size: 1.7em;
+}
+
+.content {
+	font-size: 1.5em;
+	margin-top: 15px;
+}
+
+.content a {
+	color: #ffa100;
+	text-shadow: 1px 2px black;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.content a:hover {
+	color: #ce1126;
+ text-transform: uppercase;
+}
+
+.geography-screen {
+	padding-top: 50px;
+}
+
+.geography_img {
+	width: 70%;;
+}
+
+.geography_img_wrap {
+	text-align: center;
+}
+
+.geography_text p {
+	font-size: 20px;
+}
+
+.geography_text a,
+.geography_text span {
+	color: #ffa100;
+	text-shadow: 1px 1px black;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.geography_text a:hover,
+.geography_text span:hover {
+	color: #ce1126;
+ text-transform: uppercase;
+}
+
+.chronology_text {
+  margin-bottom: 30px;
+}
+
+.chronology_text p {
+  font-size: 20px;
+}
+
+.geography_title {
+	background-color: #ce1126;
+	color: #E3A51B;
+	font-size: 36px;
+	padding: 5px;
+	padding-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-shadow: 3px 3px black;
+}
+
+.cards-wrap {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.sections_title {
+	background-color: #ce1126;
+	color: #E3A51B;
+	width: 100%;
+	font-size: 36px;
+	padding: 5px;
+	padding-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-shadow: 3px 3px black;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.sections_title__lit {
+  background-color: #ce1126;
+  color: #E3A51B;
+  width: 100%;
+  font-size: 36px;
+  padding: 5px;
+  padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px black;
+  text-align: center;
+}
+
+.portal-card {
+	background-color: #ce1126;
+	height: 450px;
+ padding: 15px;
+ text-align: center;
+ margin-left: 15px;
+ margin-right: 15px;
+ outline: none;
+ display: flex !important;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.portal-card img {
+	width: 100%;
+}
+
+.portal-card__text {
+	margin-top: 15px;
+	text-shadow: 1px 2px black;
+	font-size: 20px;
+}
+
+.portal-card__text a {
+	color: #ffa100;
+	text-shadow: 1px 2px black;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.portal-card__text a:hover {
+	color: #3cb371;
+ text-transform: uppercase;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 38%;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.slider-arrow_prod_right {
+  right: -85px;
+  background: #ce1126 url("http://wikiwarriors.org/images/c/c5/Arrow-right.png") center no-repeat;
+}
+
+.slider-arrow_prod_right:hover {
+  background: #3cb371 url("http://wikiwarriors.org/images/c/c5/Arrow-right.png") center no-repeat;
+}
+
+.slider-arrow_prod_left {
+  left: -57px;
+  background: #ce1126 url("http://wikiwarriors.org/images/b/b2/Arrow-left.png") center no-repeat;
+}
+
+.slider-arrow_prod_left:hover {
+  background: #3cb371 url("http://wikiwarriors.org/images/b/b2/Arrow-left.png") center no-repeat;
+}
+
+.slider-arrow:hover {
+  cursor: pointer;
+}
+
+.history {
+	padding-top: 40px;
+
+}
+.chronology {
+	padding-top: 40px;
+}
+
+.facts {
+	padding-top: 40px;
+
+}
+
+
+.history_title {
+	background-color: #ce1126;
+	color: #E3A51B;
+	font-size: 1em;
+	padding: 5px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+	text-shadow: 3px 3px black;
+}
+
+.history_title a {
+  background-color: #ce1126;
+  color: #E3A51B;
+  font-size: 2.2em;
+  padding: 5px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px black;
+  text-decoration: none;
+}
+
+.history img {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.history p {
+  font-size: 1.2em;
+}
+
+.portal-card__text__literature {
+	font-size: 0.9em;
+}
+
+.portal-card__literature_img img {
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* Карточки дружественных порталов */
+.portals-list__card {
+  text-align: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none
+}
+
+.portals-list__card_img {
+  width: 100%;
+  outline: none;
+  margin-bottom: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.portals-list__card_img_hover {
+  -webkit-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+  outline: none;
+}
+
+.portals-list__card a {
+	  font-size: 1.7em;
+		color: #ffa100;
+		text-shadow: 1px 2px black;
+		text-decoration: none;
+		transition: all 0.2s;
+	}
+
+	.portals-list__card a:hover {
+		color: #ce1126;
+	 text-transform: uppercase;
+	}
+
+/* Футер   */
+
+.footer {
+  height: 15vh;
+  background-color: #2E9AFE;
+  padding: 5vh;
+  text-align: center;
+}
+
+.credits {
+  color: white;
+  font-size: 0.7em;
+  line-height: 1.6;
+}
+
+.credits a {
+  color: white;
+  font-size: 1.3em;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.credits a:hover {
+  text-shadow: 3px 3px 10px red, -3px -3px 10px blue;
+}
+
+/* Хронология */
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 50px;
+}
+
+.timeline {
+	 width: 100%;
+	 min-height: 600px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.timeline p {
+  text-align: center;
+}
+
+.timeline ol {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px 0;
+  transition: all 0.3s ease;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 8px;
+}
+
+.timeline li:hover {
+  cursor: pointer;
+}
+
+.timeline div:hover {
+  cursor: w-resize;;
+}
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.timeline img {
+  width: 80%;
+}
+
+.timeline a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #ffa100;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.timeline a:hover {
+ color: #ce1126;
+ text-transform: uppercase;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  font-size: 1.5rem;
+  white-space: normal;
+  color: black;
+  background: white;
+  -moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		-webkit-user-select: none;
+			user-select: none;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.period1_t {
+  background: #ffa100;
+}
+
+.period2_t {
+  background: #ff1452;
+}
+
+.period3_t {
+  background: #89ff08;
+}
+
+.period4_t {
+  background: #000;
+}
+
+.period5_t {
+  background: #07dbff;
+}
+
+.period6_t {
+  background: #9e11a7;
+}
+
+.timeline {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -47px;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: .5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+  background: #ce1126;
+  border-radius: 50%;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+  .timeline ol,
+  .timeline ol li {
+    width: auto; 
+  }
+  
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+  
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+  
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+  
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+  
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+  
+  .timeline ol li div {
+    position: static;
+  }
+  
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+  
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+  
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+}
+
+/* Прокрутка старницы наверх */
+
+.scrollup {
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  text-indent: -9999px;
+  background: url('http://wikiwarriors.org/images/b/ba/Arrow-up.png') no-repeat;
+  transition: all 0.2s;
+}
+
+.scrollup:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+	  .slider {
+    height: 140vh;
+   }
+  .main-shield__img {
+    width: 30%;
+    margin-top: 20px;
+  }
+	 .geography-screen {
+	   padding-top: 20px;
+   }
+	.slider-arrow_prod_right {
+   right: -45px;
+   border: none;
+   background: transparent url("http://wikiwarriors.org/images/c/c5/Arrow-right.png") center no-repeat;
+   }
+  .slider-arrow_prod_right:hover {
+  background: transparent url(http://wikiwarriors.org/images/c/c5/Arrow-right.png) center no-repeat;
+  }
+  .slider-arrow_prod_left {
+  	background: transparent url(http://wikiwarriors.org/images/b/b2/Arrow-left.png) center no-repeat;
+   left: -30px;
+   border: none;
+  }
+  .slider-arrow_prod_left:hover {
+  	background: transparent url(http://wikiwarriors.org/images/b/b2/Arrow-left.png) center no-repeat;
+  }
+}
+
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .header-logo a {
+    font-size: 28px;
+  }
+
+  .slider {
+   display: none;
+  }
+
+  .item {
+    width: 100%;
+    height: 25%;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    background-position: 40% 20%;
+  }
+
+  .item:hover {
+    -webkit-box-flex: 100%;
+    -ms-flex-positive: 100%;
+    flex-grow: 100%;
+  }
+
+  .menu-link {
+    padding: 18px 18px 18px 10px;
+  }
+
+  .over-menu ul a {
+   font-size: 1.4em;
+   line-height: 3;
+  }
+  .on-slider {
+  	height: 100%;
+  }
+  .main-screen {
+    text-align: center;
+    padding: 0;
+  }
+  .main-text {
+    margin-left: 0;
+  }  
+  .main-text h1 {
+    font-size: 3em;
+    text-shadow: 3px 2px black;
+  } 
+  .main-text h1:hover {
+    font-size: 3.2em;
+  }
+  .main-text p {
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-align: center;
+  }
+  .main-shield {
+    text-align: center;
+}
+  .main-shield__img {
+    width: 50%;
+  }
+  .bread-crumbs {
+    margin-bottom: 10px;
+  }  
+  .main-references a {
+   font-size: 1em;
+  } 
+  .content-screen {
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+   padding: 0;
+  }
+  .content-screen h2 {
+   background-color: #ce1126;
+   color: #E3A51B;
+   font-size: 36px;
+   padding: 5px;
+   padding-left: 15px;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   text-shadow: 1px 2px black;
+
+  }  
+  .geography_title {
+  	text-align: center;
+    text-shadow: 1px 2px black;
+  }
+  .geography_text p {
+    text-align: center;
+  }
+  .sections_title {
+  text-shadow: 1px 2px black;
+}
+
+  .sections_title__lit {
+  text-shadow: 1px 2px black;
+}
+  .slider-arrow_prod_right {
+   right: -27px;
+   }
+  .cards-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .scrollup {
+    right: 31px;
+  }
+  .history_title {
+    text-align: center;
+  }
+
+  .history_title a {
+    font-size: 2em;
+  }
+  .history p {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .main-references {
+    text-align: center;
+  }
+  .portals-list__card a {
+    font-size: 1.2em;
+  }
+  .slider-arrow-also {
+  top: 20%;
+  }
+
+} 
+
+@media (max-width: 360px) {
+	.main-shield {
+    margin-top: 0;
+}
+	.geography_img_wrap {
+    margin-top: 30px;
+  } 
+}

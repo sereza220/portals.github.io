@@ -1,0 +1,624 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #66120e;
+  color: black;
+  font-family: 'Play', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header {
+  background: #2E9AFE;
+  height: 50px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-logo a {
+  display: inline-block;
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+}
+
+.header-logo a:hover {
+  color: #E3A51B;
+}
+
+.menu-link {
+  display: block;
+  position: fixed;
+  z-index: 9;
+  padding: 18px;
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.menu-link span:before {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: '';
+  margin-top: -9px;
+  margin-left: -15px;
+}
+
+.menu-link span:after {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: '';
+  margin-top: 6px;
+  margin-left: -15px;
+}
+
+.menu-link_active span {
+  background-color: transparent;
+}
+
+.menu-link_active span:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-top: 0;
+}
+
+.menu-link_active span:after {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  margin-top: 0;
+}
+
+.over-menu {
+  position: fixed;
+  background-color: #2E9AFE;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  left: -100vw;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.over-menu_active {
+  left: 0;
+}
+
+.over-menu li {
+  width: 100vw;
+}
+
+.over-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.over-menu ul a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  line-height: 4;
+  font-weight: 100;
+  letter-spacing: 4px;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.over-menu ul a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2E9AFE;
+}
+
+.wrap {
+  padding-top: 40px;
+}
+
+.screen {
+  padding: 30px;
+  background-color: #EBE5E4;
+  border-radius: .3em;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.screen-main {
+  margin: 50px 0;
+  text-align: center;
+  min-height: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.screen-main:before {
+  content: '';
+  background: url("http://wikiwarriors.org/images/7/73/Portals-design-left.png") left top no-repeat;
+  display: block;
+  height: 500px;
+  width: 282px;
+  left: -250px;
+  top: 50%;
+  margin-top: -250px;
+  position: absolute;
+}
+
+.screen-main:after {
+  content: '';
+  background: url("http://wikiwarriors.org/images/e/ed/Portals-design-rightt.png") right top no-repeat;
+  display: block;
+  height: 500px;
+  width: 310px;
+  right: -251px;
+  top: 50%;
+  margin-top: -250px;
+  position: absolute;
+}
+
+.screen-main__descr {
+  margin: 50px auto;
+  width: 75%;
+}
+
+.screen-main__descr a {
+  text-decoration: none;
+  color: #66120e;
+}
+
+.screen__descr {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.screen-list {
+  text-align: center;
+}
+
+.portals-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.portals-list a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.portals-list__card {
+  text-align: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.portals-list__card_img {
+  width: 120px;
+  margin-bottom: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.portals-list__card_img_hover {
+  -webkit-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
+
+.portals-list__europe {
+  background-color: #1F50CC;
+}
+
+.portals-list__europe a {
+  color: #FECF00;
+}
+
+.portals-list__asia {
+  background-color: #cf361f;
+}
+
+.portals-list__africa {
+  background-color: #479455;
+}
+
+.portals-list__africa a {
+  color: #000;
+}
+
+.portals-list__na {
+  background-color: #E15C5C;
+}
+
+.portals-list__sa {
+  background-color: #D9EE67;
+}
+
+.portals-list__sa a {
+  color: #000;
+}
+
+.portals-list__australia {
+  background-color: #7DD1F9;
+}
+
+.portals-list__australia a {
+  color: #000;
+}
+
+.portals-list__centuries {
+  background-color: #CDAA7D;
+}
+
+.portals-list__colors {
+  background-color: #000;
+}
+
+.portals-list__animals {
+  background-color: #fff;
+}
+
+.portals-list__animals a {
+  color: #4eab0a;
+}
+
+.portals-list__museums {
+  background-color: #f164ec;
+}
+
+.portals-list__other {
+  background-color: #b9ac4e;
+}
+
+.spoiler-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #fff;
+  background: #66120e;
+  padding: 10px 25px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 #8c1111;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.spoiler-link:hover {
+  background: #2E9AFE;
+}
+
+.spoiler-link + .spoiler-link {
+  margin-left: 5px;
+}
+
+.spoiler-link--active {
+  background: #2E9AFE;
+  border-color: #29A8C9;
+  text-shadow: 0 1px 0 #2d751c;
+}
+
+.spoiler-link--active:hover {
+  background: #29A8C9;
+}
+
+.spoiler {
+  color: #907c6b;
+  border-radius: 3px;
+  border-bottom: 1px solid #999;
+}
+
+.spoiler__title {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-weight: 200;
+  color: #b63333;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.spoiler a {
+  text-decoration: none;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.item {
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #aeaeaeae;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+.item span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.item-1 {
+  background: url("http://wikiwarriors.org/images/4/4b/F-111D_над_пирамидами_долины_Гиза%2C_1983_г.jpeg") no-repeat;
+  background-size: cover;
+}
+
+.item-2 {
+  background: url("http://wikiwarriors.org/images/a/aa/Сикх%2C_Британская_Королевская_гвардия%2C_полк_Гренадёры_Гвардии%2C_Лондон%2C_2018_г..jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-3 {
+  background: url("http://wikiwarriors.org/images/b/b9/Костюм_из_макетов_огнестрельного_оружия%2C_19-й_фестиваль_Odessa_Fashion_Day%2C_Украина%2C_2019_г..jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-4 {
+  background: url("http://wikiwarriors.org/images/8/87/Непальские_полицейские_отдыхают_на_ступеньках_индуистского_храма_во_время_праздника_Бискет_Джатра%2C_Катманду%2C_2014_г..jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-5 {
+  background: url("http://wikiwarriors.org/images/4/49/Stackedsoviet1945.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-6 {
+  background: url("http://wikiwarriors.org/images/6/68/Разбивание_бутылки_шампанского_об_рубку_подводной_лодкиБелгород%2C_которая_способна_нести_ядерное_оружие%2C_Россия%2C_2019_г..jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-7 {
+  background: url("http://wikiwarriors.org/images/b/b9/Американская_пехота_290-го_полка_в_Арденнских_лесах_во_время_Арденнской_операции._ВМВ._Бельгия._Январь_1945_г..jpg") center no-repeat;
+  background-size: cover;
+}
+
+.item-8 {
+  background: url("http://wikiwarriors.org/images/a/ad/Американский_чернокожий_солдат_находит_очень_смешным_своего_товарища_в_противогазе._Западный_фронт%2C_1918_год_..jpg") center no-repeat;
+  background-size: cover;
+} 
+
+
+.random-block {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.random-block a {
+  text-decoration: none;
+  color: #66120e;
+}
+
+.footer {
+  height: 15vh;
+  background-color: #2E9AFE;
+  padding: 5vh;
+  text-align: center;
+}
+
+.credits {
+  color: white;
+  font-size: 0.7em;
+  line-height: 1.6;
+}
+
+.credits a {
+  color: white;
+  font-size: 1.3em;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.credits a:hover {
+  text-shadow: 3px 3px 10px red, -3px -3px 10px blue;
+}
+
+.scrollup {
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  text-indent: -9999px;
+  background: url('http://wikiwarriors.org/images/b/ba/Arrow-up.png') no-repeat;
+  transition: all 0.2s;
+}
+
+.scrollup:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .header-logo a {
+    font-size: 28px;
+  }
+
+  .portals-list img {
+    width: 100%;
+  }
+
+  .screen-list {
+    padding: 0;
+  }
+
+  .slider {
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .item {
+    width: 100%;
+    height: 25%;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    background-position: 40% 20%;
+  }
+
+  .item:hover {
+    -webkit-box-flex: 100%;
+    -ms-flex-positive: 100%;
+    flex-grow: 100%;
+  }
+
+  .menu-link {
+    padding: 18px 18px 18px 10px;
+  }
+  .over-menu ul a {
+   font-size: 1.4em;
+   line-height: 3;
+  }
+  .screen-main {
+    width: 100%;
+  }
+
+  .screen-main img {
+    width: 100%;
+  }
+  .screen-main__descr {
+    margin: 20px 0;
+    width: 100%
+  }
+
+  .screen-main:before,
+  .screen-main:after {
+    display: none;
+  }
+
+  .ages-image {
+    height: 100px;
+    width: auto !important;
+  }
+
+  .scrollup {
+    right: 31px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .screen-main:after {
+    margin-left: 840px;
+    margin-top: -200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .screen-main:before,
+  .screen-main:after {
+    display: none;
+  }
+}

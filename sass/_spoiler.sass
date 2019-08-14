@@ -1,0 +1,34 @@
+.spoiler-link 
+ display: inline-block
+ text-decoration: none
+ margin-bottom: 10px
+ color: #fff
+ background: #66120e
+ padding: 10px 25px
+ border-radius: 3px
+ text-shadow: 0 1px 0 #8c1111
+ -webkit-transition: all 0.6s ease
+ transition: all 0.6s ease
+ &:hover
+  background: #2E9AFE
+.spoiler-link + .spoiler-link
+ margin-left: 5px
+.spoiler-link--active
+ background: #2E9AFE
+ border-color: #29A8C9
+ text-shadow: 0 1px 0 #2d751c
+.spoiler-link--active:hover 
+ background: #29A8C9
+.spoiler
+ color: #907c6b
+ border-radius: 3px
+ border-bottom: 1px solid #999
+.spoiler__title 
+ margin-top: 20px
+ margin-left: 15px
+ font-weight: 200
+ color: #b63333
+ display: inline-block
+ vertical-align: bottom
+.spoiler a
+  text-decoration: none
